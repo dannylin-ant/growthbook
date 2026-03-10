@@ -266,7 +266,7 @@ export default function ExplorerDataTable({
     return exploration.result.rows.every((r) => r.values.length === 0);
   }, [exploration?.result?.rows]);
 
-  if (hasEmptyData && !hasChart) {
+  if (hasEmptyData && !hasChart && !error) {
     return (
       <Flex
         p="4"
